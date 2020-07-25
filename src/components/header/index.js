@@ -22,7 +22,7 @@ const Wrapper = styled.div`
 `;
 
 const Logo = styled.h3`
-  margin: 5px 0 0 30px;
+  margin: 5px 0 0 50px;
 `;
 
 const Button = styled.button`
@@ -31,9 +31,11 @@ const Button = styled.button`
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
-  margin-right: 30px;
+  margin-right: 50px;
   ${({ theme }) => `
     background: ${theme.colors.background};
-    color: ${theme.colors.text_color}
+    color: ${theme.colors.text_color};
+    font-family: ${theme.font};
+    font-weight: 600;
   `}
 `;
