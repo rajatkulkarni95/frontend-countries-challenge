@@ -5,10 +5,9 @@ import { getCountries } from "../../services";
 import { CountryCard } from "../../components/country-card";
 import { FilterRegions } from "../../components/filter-region";
 
-export const HomePage = () => {
+export const HomePage = ({ countries }) => {
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("");
-  const [countries, setCountries] = useState([]);
 
   const handleChange = (event) => {
     setSearch(event.target.value);
@@ -17,10 +16,6 @@ export const HomePage = () => {
   const handleRegionChange = (event) => {
     setRegion(event.target.value);
   };
-
-  useEffect(() => {
-    getCountries().then((data) => setCountries(data));
-  }, []);
 
   return (
     <>

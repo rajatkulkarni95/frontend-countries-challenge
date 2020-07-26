@@ -1,23 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const CountryCard = ({ flag, name, population, region, capital }) => {
   return (
-    <Wrapper>
-      <Image src={flag} />
-      <Text>
-        <h5>{name}</h5>
-        <p>
-          <span>Population:</span> {population}
-        </p>
-        <p>
-          <span>Region:</span> {region}
-        </p>
-        <p>
-          <span>Capital:</span> {capital}
-        </p>
-      </Text>
-    </Wrapper>
+    <StyledLink to={`/country/${name}`}>
+      <Wrapper>
+        <Image src={flag} />
+        <Text>
+          <h5>{name}</h5>
+          <p>
+            <span>Population:</span> {population}
+          </p>
+          <p>
+            <span>Region:</span> {region}
+          </p>
+          <p>
+            <span>Capital:</span> {capital}
+          </p>
+        </Text>
+      </Wrapper>
+    </StyledLink>
   );
 };
 
@@ -37,6 +40,11 @@ const Image = styled.img`
   height: 150px;
   width: auto;
   overflow: hidden;
+`;
+
+const StyledLink = styled(Link)`
+  color: inherit;
+  text-decoration: inherit;
 `;
 
 const Text = styled.div`
