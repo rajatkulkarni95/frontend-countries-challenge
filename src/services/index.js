@@ -5,5 +5,7 @@ export const getCountries = async () => {
     .get("https://restcountries.eu/rest/v2/all")
     .then((response) => response.data);
 
+  console.log(result);
+
   return result;
 };

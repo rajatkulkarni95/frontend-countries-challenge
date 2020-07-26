@@ -31,7 +31,7 @@ const SearchStyle = styled.input`
     font-family: ${theme.font};
     font-weight: 600;
     `}
-
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
   padding: 15px;
   margin: 30px 0 0 50px;
   width: 400px;

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./components/GlobalStyle";
 import { light_theme, dark_theme } from "./theme";
-import { getCountries } from "./services";
 import { Header } from "./components/header";
 import { HomePage } from "./pages/home-page";
 

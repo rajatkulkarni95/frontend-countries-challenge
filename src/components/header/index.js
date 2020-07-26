@@ -18,7 +18,8 @@ const Wrapper = styled.div`
   justify-content: space-between;
   padding: 10px;
   background: ${(props) => props.theme.colors.elements_bg};
-  box-shadow: 0px 5px ${(props) => props.theme.colors.elements_bg};}
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  }
 `;
 
 const Logo = styled.h3`
@@ -32,6 +33,7 @@ const Button = styled.button`
   cursor: pointer;
   border-radius: 5px;
   margin-right: 50px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   ${({ theme }) => `
     background: ${theme.colors.background};
     color: ${theme.colors.text_color};
