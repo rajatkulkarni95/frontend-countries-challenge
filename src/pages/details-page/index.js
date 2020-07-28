@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { useParams, Link } from "react-router-dom";
 import { MdKeyboardBackspace } from "react-icons/md";
+import { CountryContext } from "../../context";
+import { CountryBasicDetail } from "../../components/country-details/country-basics";
+import { CountryAdditionalDetails } from "../../components/country-details/country-additional";
+import { BorderDetails } from "../../components/country-details/border-details";
 
-export const DetailedView = ({ countries }) => {
+export const DetailedView = () => {
   const { id } = useParams();
+  const countries = useContext(CountryContext);
   const singleCountry = countries.filter(
-    (country) => country.name.toLowerCase() == id.toLowerCase()
+    (country) => country.name.toLowerCase() === id.toLowerCase()
   );
-
-  console.log(singleCountry);
 
   return (
     <>
@@ -23,52 +26,10 @@ export const DetailedView = ({ countries }) => {
         <DetailWrapper key={country.numericCode}>
           <Image src={country.flag} />
           <TextWrapper>
-            <LeftText>
-              <h1>{country.name}</h1>
-              <p>
-                <span>Native Name: </span>
-                {country.nativeName}
-              </p>
-              <p>
-                <span>Population: </span>
-                {country.population}
-              </p>
-              <p>
-                <span>Region: </span>
-                {country.region}
-              </p>
-              <p>
-                <span>Sub Region: </span>
-                {country.subregion}
-              </p>
-              <p>
-                <span>Capital: </span>
-                {country.capital}
-              </p>
-            </LeftText>
-            <RightText>
-              <p>
-                <span>Top Level Domain: </span>
-                {country.topLevelDomain.join()}
-              </p>
-              <p>
-                <span>Currencies: </span>
-                {country.currencies[0].name}
-              </p>
-              <p>
-                <span>Languages: </span>
-                {country.languages.map((lang) => `${lang.name}, `)}
-              </p>
-            </RightText>
+            <CountryBasicDetail {...country} />
+            <CountryAdditionalDetails {...country} />
+            <BorderDetails borders={country.borders} />
           </TextWrapper>
-          <BorderCountries>
-            <p>
-              <span>Border Countries: </span>
-              {country.borders.slice(0, 3).map((border) => (
-                <SmallButton key={border}>{border}</SmallButton>
-              ))}
-            </p>
-          </BorderCountries>
         </DetailWrapper>
       ))}
     </>
@@ -94,62 +55,28 @@ const BackButton = styled(Link)`
   `}
 `;
 
-const SmallButton = styled.button`
-  border: none;
-  letter-spacing: 1;
-  padding: 10px 10px;
-  margin-right: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  ${({ theme }) => `
-  background: ${theme.colors.background};
-  color: ${theme.colors.text_color};
-  font-family: ${theme.font};
-  font-weight: 300;
-`}
-`;
-
 const DetailWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 40px 50px 0 60px;
+
+  margin: 40px 50px 0px 60px;
   height: 400px;
   width: 1200px;
 `;
 
 const Image = styled.img`
   width: 600px;
+  margin-right: 100px;
 `;
 
 const TextWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
 
   p {
     line-height: 2;
   }
   span {
     font-weight: 600;
-  }
-`;
-
-const LeftText = styled.div`
-  h1 {
-    margin: 30px 0 30px 0;
-  }
-`;
-
-const RightText = styled.div`
-  margin: 102px 0 0 60px;
-`;
-
-const BorderCountries = styled.div`
-  position: absolute;
-  top: 500px;
-  left: 820px;
-
-  span {
-    font-weight: 600;
-    margin-right: 10px;
   }
 `;

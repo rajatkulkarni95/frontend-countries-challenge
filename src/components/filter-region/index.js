@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { MdArrowDropDown } from "react-icons/md";
 
 export const FilterRegions = ({ value, handleChange }) => {
   const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];

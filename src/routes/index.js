@@ -1,19 +1,19 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { HomePage } from "../pages/home-page";
 import { DetailedView } from "../pages/details-page";
 
-export const Routes = ({ countries }) => (
+export const Routes = () => (
   <Router>
     <Switch>
       <Route exact path="/">
-        <HomePage countries={countries} />
+        <HomePage />
       </Route>
       <Route exact path="/home">
-        <HomePage countries={countries} />
+        <HomePage />
       </Route>
       <Route path="/country/:id">
-        <DetailedView countries={countries} />
+        <DetailedView />
       </Route>
     </Switch>
   </Router>

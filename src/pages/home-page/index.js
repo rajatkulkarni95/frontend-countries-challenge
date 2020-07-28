@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { Search } from "../../components/search";
-import { getCountries } from "../../services";
 import { CountryCard } from "../../components/country-card";
 import { FilterRegions } from "../../components/filter-region";
+import { CountryContext } from "../../context";
 
-export const HomePage = ({ countries }) => {
+export const HomePage = () => {
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("");
 
@@ -16,6 +16,8 @@ export const HomePage = ({ countries }) => {
   const handleRegionChange = (event) => {
     setRegion(event.target.value);
   };
+
+  const countries = useContext(CountryContext);
 
   return (
     <>
@@ -36,7 +38,7 @@ export const HomePage = ({ countries }) => {
                 />
               ))
           : countries
-              .filter((country) => country.region == region)
+              .filter((country) => country.region === region)
               .map((filteredCountries) => (
                 <CountryCard
                   key={filteredCountries.numericCode}
