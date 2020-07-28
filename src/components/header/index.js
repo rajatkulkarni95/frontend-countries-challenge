@@ -19,11 +19,20 @@ const Wrapper = styled.div`
   padding: 10px;
   background: ${(props) => props.theme.colors.elements_bg};
   box-shadow: 0 0 5px rgba(0,0,0,0.3);
+
+  @media (max-width:400px) {
+    padding: 20px;
+    font-size: 14px;
+  }
   }
 `;
 
 const Logo = styled.h3`
   margin: 5px 0 0 50px;
+
+  @media (max-width: 400px) {
+    margin: 5px 0 0 5px;
+  }
 `;
 
 const Button = styled.button`
@@ -40,4 +49,10 @@ const Button = styled.button`
     font-family: ${theme.font};
     font-weight: 600;
   `}
+
+  @media (max-width: 400px) {
+    padding: 5px;
+    margin-right: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
 `;

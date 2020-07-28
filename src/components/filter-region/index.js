@@ -33,6 +33,10 @@ const Select = styled.select`
   width: 250px;
   border: none;
   border-radius: 5px;
+
+  @media (max-width: 400px) {
+    margin: 5px 0px 0 15px;
+  }
 `;
 
 const Option = styled.option`

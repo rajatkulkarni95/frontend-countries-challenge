@@ -5,7 +5,11 @@ import { AiOutlineSearch } from "react-icons/ai";
 export const Search = ({ handleChange, value }) => (
   <Wrapper>
     <AiOutlineSearch
-      style={{ position: "absolute", left: "60px", top: "45px" }}
+      style={{
+        position: "absolute",
+        left: "60px",
+        top: "45px",
+      }}
     />
     <SearchStyle
       type="text"
@@ -37,4 +41,10 @@ const SearchStyle = styled.input`
   width: 400px;
   border: none;
   border-radius: 5px;
+
+  @media (max-width: 400px) {
+    width: 90vw;
+    display: block;
+    margin: 10px auto;
+  }
 `;

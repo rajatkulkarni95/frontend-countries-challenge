@@ -38,4 +38,10 @@ const Wrapper = styled.div`
   h1 {
     margin: 30px 0 30px 0;
   }
+
+  @media (max-width: 400px) {
+    h1 {
+      margin: 20px 0 20px 0;
+    }
+  }
 `;

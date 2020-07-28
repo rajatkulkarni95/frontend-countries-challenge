@@ -56,9 +56,19 @@ const HomeStyle = styled.div`
   justify-content: space-between;
   margin: 20px 40px 0 30px;
   flex-wrap: wrap;
+
+  @media (max-width: 400px) {
+    margin: 20px 20px 0 20px;
+    justify-content: center;
+  }
 `;
 
 const SearchHeader = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 `;

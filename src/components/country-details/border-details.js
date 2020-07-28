@@ -34,6 +34,10 @@ const Wrapper = styled.div`
     font-weight: 600;
     margin-right: 10px;
   }
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 const SmallButton = styled(Link)`

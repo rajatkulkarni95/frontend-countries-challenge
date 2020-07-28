@@ -53,6 +53,12 @@ const BackButton = styled(Link)`
     font-family: ${theme.font};
     font-weight: 600;
   `}
+
+  @media (max-width:400px ) {
+    padding: 5px 30px;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
 `;
 
 const DetailWrapper = styled.div`
@@ -62,11 +68,22 @@ const DetailWrapper = styled.div`
   margin: 40px 50px 0px 60px;
   height: 400px;
   width: 1200px;
+
+  @media (max-width: 400px) {
+    margin: 40px 15px 0px 15px;
+    width: 90vw;
+    flex-direction: column;
+  }
 `;
 
 const Image = styled.img`
   width: 600px;
   margin-right: 100px;
+
+  @media (max-width: 400px) {
+    width: 90vw;
+    height: 250px;
+  }
 `;
 
 const TextWrapper = styled.div`
@@ -78,5 +95,9 @@ const TextWrapper = styled.div`
   }
   span {
     font-weight: 600;
+  }
+
+  @media (max-width: 400px) {
+    flex-direction: column;
   }
 `;

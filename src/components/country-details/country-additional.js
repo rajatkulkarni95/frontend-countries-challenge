@@ -24,4 +24,8 @@ export const CountryAdditionalDetails = ({
 
 const Wrapper = styled.div`
   margin: 102px 0 0 30px;
+
+  @media (max-width: 400px) {
+    margin: 30px 0 0 0;
+  }
 `;
