@@ -67,11 +67,12 @@ const DetailWrapper = styled.div`
 
   margin: 40px 50px 0px 60px;
   height: 400px;
-  width: 1200px;
+  width: 1300px;
 
   @media (max-width: 440px) {
-    margin: 40px 15px 0px 15px;
+    margin: 40px 15px 20px 15px;
     width: 90vw;
+
     flex-direction: column;
   }
 `;

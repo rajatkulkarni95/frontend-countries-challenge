@@ -12,8 +12,8 @@ export const BorderDetails = ({ borders }) => {
   console.log(borderNames.slice(0, 3));
   return (
     <Wrapper>
+      <span>Border Countries: </span>
       <p>
-        <span>Border Countries: </span>
         {borderNames
           .slice(0, 3)
           .map((subArray) =>
@@ -30,12 +30,15 @@ export const BorderDetails = ({ borders }) => {
 
 const Wrapper = styled.div`
   align-self: flex-end;
+  padding-bottom: 50px;
   span {
     font-weight: 600;
     margin-right: 10px;
   }
 
   @media (max-width: 440px) {
+    align-self: flex-start;
+    margin-top: 10px;
     flex-direction: column;
   }
 `;
@@ -46,6 +49,7 @@ const SmallButton = styled(Link)`
   padding: 5px 5px;
   width: auto;
   margin-right: 10px;
+  margin-top: 10px;
   cursor: pointer;
   font-size: 14px;
   text-decoration: inherit;
