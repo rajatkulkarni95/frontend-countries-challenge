@@ -6,7 +6,8 @@
   <a href="https://whereintheworld-react.netlify.app/">Visit the live app</a> |
 </h3>
 
-![App screenshot](./assets/HomePage.png,./assets/DetailsPage.png)
+![App screenshot](./assets/HomePage.PNG) (./assets/DetailsPage.PNG)
+(./assets/DetailsPage.png)
 
 ## What is this? A challenge
 
