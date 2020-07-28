@@ -34,7 +34,7 @@ const Select = styled.select`
   border: none;
   border-radius: 5px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     margin: 5px 0px 0 15px;
   }
 `;

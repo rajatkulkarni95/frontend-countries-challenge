@@ -35,7 +35,7 @@ const Wrapper = styled.div`
     margin-right: 10px;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     flex-direction: column;
   }
 `;

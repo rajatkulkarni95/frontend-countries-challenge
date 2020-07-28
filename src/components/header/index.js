@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 const Logo = styled.h3`
   margin: 5px 0 0 50px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     margin: 5px 0 0 5px;
   }
 `;
@@ -50,7 +50,7 @@ const Button = styled.button`
     font-weight: 600;
   `}
 
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     padding: 5px;
     margin-right: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);

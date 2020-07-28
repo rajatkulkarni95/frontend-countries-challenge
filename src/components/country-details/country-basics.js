@@ -39,7 +39,7 @@ const Wrapper = styled.div`
     margin: 30px 0 30px 0;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     h1 {
       margin: 20px 0 20px 0;
     }

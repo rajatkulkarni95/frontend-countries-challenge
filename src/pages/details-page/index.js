@@ -54,7 +54,7 @@ const BackButton = styled(Link)`
     font-weight: 600;
   `}
 
-  @media (max-width:400px ) {
+  @media (max-width:440px ) {
     padding: 5px 30px;
     margin-left: 20px;
     margin-top: 30px;
@@ -69,7 +69,7 @@ const DetailWrapper = styled.div`
   height: 400px;
   width: 1200px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     margin: 40px 15px 0px 15px;
     width: 90vw;
     flex-direction: column;
@@ -80,7 +80,7 @@ const Image = styled.img`
   width: 600px;
   margin-right: 100px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     width: 90vw;
     height: 250px;
   }
@@ -97,7 +97,7 @@ const TextWrapper = styled.div`
     font-weight: 600;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     flex-direction: column;
   }
 `;

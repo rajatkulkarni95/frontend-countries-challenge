@@ -42,7 +42,7 @@ const SearchStyle = styled.input`
   border: none;
   border-radius: 5px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     width: 90vw;
     display: block;
     margin: 10px auto;
