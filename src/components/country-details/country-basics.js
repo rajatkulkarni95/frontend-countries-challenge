@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 export const CountryBasicDetail = ({
-  name,
   nativeName,
   population,
   region,
@@ -10,7 +9,6 @@ export const CountryBasicDetail = ({
   capital,
 }) => (
   <Wrapper>
-    <h1>{name}</h1>
     <p>
       <span>Native Name: </span>
       {nativeName}
@@ -35,16 +33,5 @@ export const CountryBasicDetail = ({
 );
 
 const Wrapper = styled.div`
-  h1 {
-    margin: 30px 0 30px 0;
-  }
-
-  height: 300px;
-
-  @media (max-width: 440px) {
-    h1 {
-      margin: 20px 0 20px 0;
-    }
-    height: 250px;
-  }
+  grid-area: left;
 `;

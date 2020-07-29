@@ -26,6 +26,7 @@ export const DetailedView = () => {
         <DetailWrapper key={country.numericCode}>
           <Image src={country.flag} />
           <TextWrapper>
+            <h1>{country.name}</h1>
             <CountryBasicDetail {...country} />
             <CountryAdditionalDetails {...country} />
             <BorderDetails borders={country.borders} />
@@ -43,8 +44,7 @@ const BackButton = styled(Link)`
   padding: 10px 30px;
   cursor: pointer;
   border-radius: 5px;
-  margin-left: 60px;
-  margin-top: 40px;
+  margin: 40px 0px 30px 60px;
   text-decoration: inherit;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   ${({ theme }) => `
@@ -63,14 +63,14 @@ const BackButton = styled(Link)`
 
 const DetailWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   margin: 40px 50px 0px 60px;
   height: 400px;
-  width: 1300px;
+  width: 90vw;
 
   @media (max-width: 440px) {
-    margin: 40px 15px 20px 15px;
+    margin: 120px 15px 20px 15px;
     width: 90vw;
 
     flex-direction: column;
@@ -78,27 +78,42 @@ const DetailWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  width: 600px;
+  width: 40%;
+
   margin-right: 100px;
 
   @media (max-width: 440px) {
     width: 90vw;
     height: 250px;
+    margin-top: 60px;
   }
 `;
 
 const TextWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "left left left right right right"
+    "footer footer footer footer footer footer";
+  grid-gap: 20px;
+
+  h1 {
+    grid-area: header;
+  }
 
   p {
-    line-height: 2;
+    line-height: 1.5;
   }
+
   span {
     font-weight: 600;
   }
 
   @media (max-width: 440px) {
-    flex-direction: column;
+    grid-template-areas:
+      "header header header"
+      "left left left"
+      "right right right"
+      "footer footer footer";
   }
 `;

@@ -29,17 +29,10 @@ export const BorderDetails = ({ borders }) => {
 };
 
 const Wrapper = styled.div`
-  align-self: flex-end;
-  padding-bottom: 50px;
-  span {
-    font-weight: 600;
-    margin-right: 10px;
-  }
+  grid-area: footer;
 
   @media (max-width: 440px) {
-    align-self: flex-start;
-    margin-top: 10px;
-    flex-direction: column;
+    margin-bottom: 20px;
   }
 `;
 
