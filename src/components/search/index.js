@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { AiOutlineSearch } from "react-icons/ai";
+
 
 export const Search = ({ handleChange, value }) => (
   <SearchStyle
