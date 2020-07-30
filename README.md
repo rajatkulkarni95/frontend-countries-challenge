@@ -16,6 +16,5 @@
     <li>react-router-dom</li>
     <li>styled-components</li>
     <li>react-icons</li>
-    <li>Context API</li>
   </ul>
 </div>
