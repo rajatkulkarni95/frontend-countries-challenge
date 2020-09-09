@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  background: ${(props) => props.theme.colors.elements_bg};
+  background: ${(props) => props.theme.colors.components};
   box-shadow: 0 0 5px rgba(0,0,0,0.3);
 
   @media (max-width:400px) {
@@ -40,9 +40,7 @@ const Button = styled.button`
   letter-spacing: 1;
   padding: 10px;
   cursor: pointer;
-  border-radius: 5px;
   margin-right: 50px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   ${({ theme }) => `
     background: ${theme.colors.background};
     color: ${theme.colors.text_color};
